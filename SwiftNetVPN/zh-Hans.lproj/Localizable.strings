@@ -1,0 +1,62 @@
+/* 设置（开发阶段用，后续补其他语言后可删） */
+"settings_title" = "设置";
+"settings_section_general" = "通用";
+"settings_general" = "通用选项";
+"settings_language" = "语言";
+
+/* 语言 */
+"language_title" = "语言";
+"language_english" = "English";
+"language_chinese" = "简体中文";
+
+/* 主页 */
+"main_app_name" = "SwiftNet";
+"main_status_idle" = "未连接";
+"main_status_dialing" = "正在连接…";
+"main_status_online" = "已连接";
+"main_status_error" = "连接异常";
+"main_btn_connect" = "连接";
+"main_btn_connecting" = "连接中";
+"main_btn_disconnect" = "断开";
+"main_current_line" = "当前线路：";
+"main_hint_idle" = "一键接入，加密你的网络。";
+"main_hint_dialing" = "正在为你建立安全通道…";
+"main_hint_online" = "流量已通过安全隧道转发。";
+"line_auto" = "智能选择";
+
+/* 隐私 */
+"privacy_title" = "隐私与使用条款";
+"privacy_body" = "我们需要使用 VPN 能力来建立加密通道，从而保护你的网络数据安全。应用不会收集与你个人身份直接关联的敏感信息，基础的连接日志仅用于排查故障与提升服务质量。\n\n请在继续使用前，仔细阅读并同意本应用的隐私政策与使用条款。";
+"privacy_agree" = "同意并继续";
+"privacy_decline" = "不同意，退出应用";
+
+/* 启动页 */
+"splash_app_name" = "SwiftNet";
+"splash_tagline" = "安全网络入口";
+
+/* 连接中 */
+"dial_title" = "正在建立连接…";
+"dial_subtitle" = "这通常只需要几秒钟时间。";
+
+/* 结果页 */
+"outcome_back" = "返回";
+"outcome_title_success" = "连接成功";
+"outcome_title_dropped" = "连接已断开";
+"outcome_title_failure" = "连接失败";
+"outcome_detail_success" = "现在可以安全地访问网络，如果需要可以随时返回主页面断开连接。";
+"outcome_detail_dropped" = "连接已结束，如需再次保护网络，只需回到主页面重新发起连接。";
+"outcome_detail_failure" = "可能是网络不稳定或线路暂时不可用，可以稍后重试或更换线路。";
+
+/* 断开确认 */
+"terminate_title" = "是否断开当前连接？";
+"terminate_message" = "断开后将停止通过安全通道转发流量。";
+"terminate_cancel" = "取消";
+"terminate_confirm" = "断开连接";
+
+/* 无网络 */
+"nonetwork_title" = "当前无网络连接";
+"nonetwork_message" = "请检查网络或蜂窝数据后重试。";
+"common_ok" = "确定";
+
+/* 节点 */
+"nodes_title" = "选择节点";

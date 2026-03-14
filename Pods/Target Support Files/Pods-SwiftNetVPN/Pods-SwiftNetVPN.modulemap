@@ -1,0 +1,6 @@
+framework module Pods_SwiftNetVPN {
+  umbrella header "Pods-SwiftNetVPN-umbrella.h"
+
+  export *
+  module * { export * }
+}

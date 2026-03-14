@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SwiftNetVPNApp: App {
+    @StateObject private var appLanguage = AppLanguageManager.shared
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(appLanguage)
         }
     }
 }

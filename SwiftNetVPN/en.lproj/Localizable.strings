@@ -1,0 +1,62 @@
+/* Settings */
+"settings_title" = "Settings";
+"settings_section_general" = "General";
+"settings_general" = "General options";
+"settings_language" = "Language";
+
+/* Language */
+"language_title" = "Language";
+"language_english" = "English";
+"language_chinese" = "Simplified Chinese";
+
+/* Main */
+"main_app_name" = "SwiftNet";
+"main_status_idle" = "Disconnected";
+"main_status_dialing" = "Connecting…";
+"main_status_online" = "Connected";
+"main_status_error" = "Connection Error";
+"main_btn_connect" = "Connect";
+"main_btn_connecting" = "Connecting";
+"main_btn_disconnect" = "Disconnect";
+"main_current_line" = "Current line: ";
+"main_hint_idle" = "One tap to connect, encrypt your traffic.";
+"main_hint_dialing" = "Establishing secure connection…";
+"main_hint_online" = "Traffic is being forwarded through a secure tunnel.";
+"line_auto" = "Smart select";
+
+/* Privacy */
+"privacy_title" = "Privacy & Terms";
+"privacy_body" = "We use VPN capability to create an encrypted tunnel and protect your network data. We do not collect personally identifiable information. Basic connection logs are used only for troubleshooting and service improvement.\n\nPlease read and agree to our Privacy Policy and Terms of Use before continuing.";
+"privacy_agree" = "Agree and Continue";
+"privacy_decline" = "Disagree and Exit";
+
+/* Splash */
+"splash_app_name" = "SwiftNet";
+"splash_tagline" = "Secure Network Entry";
+
+/* Dial */
+"dial_title" = "Connecting…";
+"dial_subtitle" = "This usually takes a few seconds.";
+
+/* Outcome */
+"outcome_back" = "Back";
+"outcome_title_success" = "Connected";
+"outcome_title_dropped" = "Disconnected";
+"outcome_title_failure" = "Connection Failed";
+"outcome_detail_success" = "You can now browse securely. Return to the main screen to disconnect when needed.";
+"outcome_detail_dropped" = "Connection ended. Return to the main screen to connect again.";
+"outcome_detail_failure" = "Network may be unstable or the server is temporarily unavailable. Please try again or switch to another line.";
+
+/* Terminate confirm */
+"terminate_title" = "Disconnect current connection?";
+"terminate_message" = "Disconnecting will stop forwarding traffic through the secure tunnel.";
+"terminate_cancel" = "Cancel";
+"terminate_confirm" = "Disconnect";
+
+/* No network */
+"nonetwork_title" = "No network connection";
+"nonetwork_message" = "Please check your network or cellular data and try again.";
+"common_ok" = "OK";
+
+/* Nodes */
+"nodes_title" = "Select Node";
