@@ -3,6 +3,14 @@
 "settings_section_general" = "General";
 "settings_general" = "General options";
 "settings_language" = "Language";
+"settings_section_info" = "Information";
+"settings_about" = "About Us";
+"settings_guide" = "How to Use";
+"settings_privacy" = "Privacy Policy";
+"settings_terms" = "Terms of Use";
+"settings_contact" = "Contact & Feedback";
+"settings_section_tools" = "Tools";
+"settings_tools_entry" = "Toolbox";
 
 /* Language */
 "language_title" = "Language";
@@ -10,7 +18,6 @@
 "language_chinese" = "Simplified Chinese";
 
 /* Main */
-"main_app_name" = "SwiftNet";
 "main_status_idle" = "Disconnected";
 "main_status_dialing" = "Connecting…";
 "main_status_online" = "Connected";
@@ -24,15 +31,27 @@
 "main_hint_online" = "Traffic is being forwarded through a secure tunnel.";
 "line_auto" = "Smart select";
 
-/* Privacy */
-"privacy_title" = "Privacy & Terms";
-"privacy_body" = "We use VPN capability to create an encrypted tunnel and protect your network data. We do not collect personally identifiable information. Basic connection logs are used only for troubleshooting and service improvement.\n\nPlease read and agree to our Privacy Policy and Terms of Use before continuing.";
-"privacy_agree" = "Agree and Continue";
-"privacy_decline" = "Disagree and Exit";
+/* Consent / Data screen (first launch) */
+"consent_title" = "Privacy & Data";
+"consent_intro" = "This app provides VPN connectivity with a focus on minimal data. Here is what may be collected and the purpose.";
+"consent_section_label" = "Data categories";
+"consent_card_id_heading" = "Service identifier";
+"consent_card_id_body" = "We assign a non-personal ID to operate the VPN and maintain security. It is not linked to names, emails, or other identifiers.";
+"consent_card_network_heading" = "Network & performance";
+"consent_card_network_body" = "Anonymized connection and quality metrics are used to choose better servers and improve the network. They cannot identify you.";
+"consent_card_usage_heading" = "Aggregate usage";
+"consent_card_usage_body" = "Totals such as connection time and data volume help us maintain and improve the service. No individual identification is involved.";
+"consent_card_external_heading" = "External services";
+"consent_card_external_body" = "Any third-party tools (e.g. analytics) are subject to their own policies. We do not control how they handle data.";
+"consent_more_terms" = "Full terms are in our Privacy Policy.";
+"consent_more_link" = "Open Privacy Policy";
+"consent_confirm_hint" = "Tapping \"Agree & Continue\" means you have read and accept the above.";
+"consent_accept_btn" = "Agree & Continue";
+"consent_reject_btn" = "Decline and Exit";
 
 /* Splash */
-"splash_app_name" = "SwiftNet";
 "splash_tagline" = "Secure Network Entry";
+"splash_version" = "Version %@";
 
 /* Dial */
 "dial_title" = "Connecting…";
@@ -60,3 +79,68 @@
 
 /* Nodes */
 "nodes_title" = "Select Node";
+
+/* Toolbox */
+"tools_title" = "Toolbox";
+"tool_ip_title" = "Current IP";
+"tool_ip_loading" = "Checking…";
+"tool_ip_desc" = "This is the IP address visible to websites and online services.";
+"tool_ip_copy" = "Copy";
+"tool_ping_title" = "Latency Test";
+"tool_ping_testing" = "Testing…";
+"tool_ping_start" = "Start";
+"tool_ping_again" = "Test Again";
+"tool_ping_hint" = "Lower values mean less delay. Different lines and regions may vary.";
+"tool_dns_title" = "DNS Leak Test";
+"tool_dns_desc" = "A DNS leak means your DNS requests may go outside the VPN tunnel. Use the link below to check.";
+"tool_dns_open" = "Open test page";
+"tool_speed_title" = "Speed Test";
+"tool_speed_desc" = "Run a quick, approximate speed check.";
+"tool_speed_start" = "Start test";
+"tool_speed_testing" = "Testing…";
+"tool_speed_download" = "Download";
+"tool_speed_upload" = "Upload";
+"tool_speed_latency" = "Latency";
+"tool_speed_again" = "Test Again";
+"tool_speed_coming" = "Coming soon.";
+
+"tool_tips_title" = "Tips";
+"tool_ip_tips" = "• Check whether your traffic is going through VPN.\n• Changing node will change the IP.\n• Result is for reference only.";
+"tool_ip_retry" = "Retry";
+"tool_ping_tips" = "• Lower value means less delay.\n• Test again after switching node.\n• Result varies by region and network.";
+"tool_dns_tips" = "• Connect to VPN first, then open the test page.\n• If leak is found, try another node or DNS.";
+"tool_speed_tips" = "• Prefer Wi‑Fi for more stable results.\n• Results may vary each time.";
+"tool_summary_tips" = "• Stats here are for reference.\n• Feature may be enhanced later.";
+"tool_random_title" = "Random Number";
+"tool_random_desc" = "Generate a random integer between min and max (inclusive).";
+"tool_random_min" = "Min";
+"tool_random_max" = "Max";
+"tool_random_generate" = "Generate";
+"tool_random_result" = "Result";
+"tool_password_title" = "Random Password";
+"tool_password_desc" = "Generate a strong random password for accounts, keys, etc. Keep it safe after generating.";
+"tool_password_length" = "Length";
+"tool_password_symbols" = "Include symbols";
+"tool_password_generate" = "Generate";
+"tool_password_copy" = "Copy";
+"tool_password_copied" = "Copied";
+"tool_password_tips" = "• Generated locally, never sent.\n• Prefer 16+ characters with symbols.";
+
+/* Info pages */
+"about_title" = "About Us";
+"about_version" = "Version";
+"about_intro" = "SwiftNet is a simple and reliable VPN app. One tap to connect and encrypt your traffic through a secure tunnel.\n\nWe focus on ease of use and minimal data collection. Your connection is protected; we do not log your browsing history or personal information.\n\nThank you for choosing us. For more information and updates, please visit our official website below.";
+"about_website" = "Official website";
+"guide_title" = "How to Use";
+"guide_content" = "1. Tap the main button to connect; tap again to disconnect.\n2. Tap \"Current line\" to choose a server node.\n3. When connected, your traffic is forwarded through an encrypted tunnel.";
+"privacy_policy_title" = "Privacy Policy";
+"privacy_policy_content" = "We use VPN to create an encrypted tunnel. We do not collect personally identifiable information. Connection logs are used only for service improvement.";
+"privacy_view_online" = "View full Privacy Policy online";
+"terms_title" = "Terms of Use";
+"terms_content" = "By using this app you agree to the applicable Terms of Use. The full Terms of Use (Apple EULA) are available at the link below.";
+"terms_view_online" = "View Terms of Use (Apple)";
+"contact_title" = "Contact & Feedback";
+"contact_content" = "For support or feedback, please contact us via email.";
+"contact_send_email" = "Send Email";
+"contact_no_mail_client" = "No mail app is set up. Email address has been copied to the clipboard.";
+"contact_email_copied" = "Email address copied.";

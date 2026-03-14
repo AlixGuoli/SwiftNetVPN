@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// 节点选择页：第一版假节点列表，第二版可接后台 categories/nodes
+/// 节点选择页：自定义 item 行，不用 List
 struct NodeScene: View {
     
     @EnvironmentObject private var hub: FlowHub
@@ -10,44 +10,63 @@ struct NodeScene: View {
     private var l10n: L10n { L10n(bundle: appLanguage.currentBundle) }
     
     var body: some View {
-        List {
-            ForEach(hub.lines) { node in
-                Button {
-                    hub.choose(line: node)
-                    dismiss()
-                } label: {
-                    HStack(spacing: 12) {
-                        nodeIcon(country: node.country)
-                        Text(node.id == -1 ? l10n.lineAuto : node.name)
-                            .foregroundColor(.primary)
-                        Spacer()
-                        if hub.currentLine.id == node.id {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(.accentColor)
+        ZStack {
+            SceneBackground()
+            ScrollView {
+                VStack(spacing: 12) {
+                    ForEach(hub.lines, id: \.id) { node in
+                        Button {
+                            hub.choose(line: node)
+                            dismiss()
+                        } label: {
+                            HStack(spacing: 12) {
+                                nodeIcon(country: node.country)
+                                Text(node.id == -1 ? l10n.lineAuto : node.name)
+                                    .font(.system(size: 16, weight: .medium))
+                                    .foregroundColor(AppTheme.textOnDark)
+                                Spacer(minLength: 8)
+                                if hub.currentLine.id == node.id {
+                                    Image(systemName: "checkmark.circle.fill")
+                                        .font(.system(size: 20))
+                                        .foregroundStyle(AppTheme.ringGreen)
+                                }
+                            }
+                            .padding(.horizontal, 18)
+                            .padding(.vertical, 18)
+                            .frame(maxWidth: .infinity, minHeight: 64, alignment: .leading)
+                            .contentShape(Rectangle())
                         }
+                        .buttonStyle(.plain)
+                        .background(
+                            RoundedRectangle(cornerRadius: AppTheme.surfaceCorner, style: .continuous)
+                                .fill(AppTheme.surfaceOnDark)
+                        )
                     }
                 }
+                .padding(.horizontal, AppTheme.pageHorizontal)
+                .padding(.top, 16)
+                .padding(.bottom, 32)
             }
         }
         .navigationTitle(l10n.nodesTitle)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(.hidden, for: .navigationBar)
     }
     
     @ViewBuilder
     private func nodeIcon(country: String) -> some View {
         if country == "AUTO" {
             Image(systemName: "globe")
-                .font(.title2)
-                .foregroundColor(.secondary)
+                .font(.system(size: 18))
+                .foregroundStyle(AppTheme.titleBlue)
                 .frame(width: 28, alignment: .center)
         } else {
             Text(flagEmoji(for: country))
-                .font(.title2)
+                .font(.system(size: 20))
                 .frame(width: 28, alignment: .center)
         }
     }
     
-    /// 国家码转旗帜 emoji（如 DE -> 🇩🇪）
     private func flagEmoji(for countryCode: String) -> String {
         let u = countryCode.uppercased()
         guard u.count == 2,

@@ -22,7 +22,6 @@ struct ContentView: View {
             // 主流程：从主页面开始的导航栈
             NavigationStack(path: $path) {
                 MainScene()
-                    .environment(\.navigateToRoute, { path.append($0) })
                     .navigationDestination(for: Route.self) { route in
                         switch route {
                         case .dial:
@@ -36,9 +35,35 @@ struct ContentView: View {
                             SettingsScene()
                         case .nodes:
                             NodeScene()
+                        case .language:
+                            LanguageScene()
+                        case .tools:
+                            ToolsScene()
+                        case .about:
+                            AboutScene()
+                        case .privacy:
+                            PrivacyPolicyScene()
+                        case .terms:
+                            TermsScene()
+                        case .contact:
+                            ContactScene()
+                        case .toolIP:
+                            IPCheckScene()
+                        case .toolPing:
+                            PingScene()
+                        case .toolDNS:
+                            DNSLeakScene()
+                        case .toolSpeed:
+                            SpeedTestScene()
+                        case .toolRandom:
+                            RandomNumberScene()
+                        case .toolPassword:
+                            PasswordGenScene()
                         }
                     }
             }
+            .preferredColorScheme(.dark)
+            .environment(\.navigateToRoute, { path.append($0) })
             .environmentObject(hub)
             .onChange(of: hub.stage) { stage in
                 switch stage {
@@ -84,12 +109,24 @@ struct ContentView: View {
     }
 }
 
-/// 路由枚举（仅主流程内的页面，后续可扩展 settings / nodes / more 等）
+/// 路由枚举（主流程 + 设置子页 + 工具箱子页）
 enum Route: Hashable {
     case dial
     case outcome(OutcomeFlag)
     case settings
     case nodes
+    case language
+    case tools
+    case about
+    case privacy
+    case terms
+    case contact
+    case toolIP
+    case toolPing
+    case toolDNS
+    case toolSpeed
+    case toolRandom
+    case toolPassword
 }
 
 // MARK: - 导航环境

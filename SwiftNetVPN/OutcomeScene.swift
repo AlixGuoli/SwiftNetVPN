@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// 结果展示页面
+/// 结果展示页面（与主场景风格统一）
 struct OutcomeScene: View {
     
     @EnvironmentObject private var appLanguage: AppLanguageManager
@@ -10,25 +10,46 @@ struct OutcomeScene: View {
     private var l10n: L10n { L10n(bundle: appLanguage.currentBundle) }
     
     var body: some View {
-        VStack(spacing: 24) {
-            Spacer()
-            Image(systemName: iconName)
-                .font(.system(size: 48, weight: .semibold))
-                .foregroundColor(iconColor)
-            Text(titleText)
-                .font(.title2.weight(.semibold))
-            Text(detailText)
-                .font(.footnote)
-                .foregroundColor(.secondary)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 32)
-            Button(l10n.outcomeBack) {
-                onDismiss()
+        ZStack {
+            SceneBackground()
+            VStack(spacing: 28) {
+                Spacer()
+                ZStack {
+                    Circle()
+                        .fill(iconColor.opacity(0.15))
+                        .frame(width: 88, height: 88)
+                    Image(systemName: iconName)
+                        .font(.system(size: 40, weight: .medium))
+                        .foregroundStyle(iconColor)
+                }
+                VStack(spacing: 8) {
+                    Text(titleText)
+                        .font(.system(size: 22, weight: .semibold))
+                        .foregroundColor(AppTheme.textOnDark)
+                    Text(detailText)
+                        .font(.system(size: 14, weight: .regular))
+                        .foregroundColor(AppTheme.textOnDarkSecondary)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 32)
+                }
+                Button {
+                    onDismiss()
+                } label: {
+                    Text(l10n.outcomeBack)
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(AppTheme.cosmicCanvasDeep)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 14)
+                        .background(
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .fill(AppTheme.textOnDark)
+                        )
+                }
+                .padding(.horizontal, AppTheme.pageHorizontal)
+                .padding(.top, 8)
+                Spacer()
             }
-            .buttonStyle(.borderedProminent)
-            Spacer()
         }
-        .padding()
     }
     
     private var iconName: String {
@@ -41,9 +62,9 @@ struct OutcomeScene: View {
     
     private var iconColor: Color {
         switch result {
-        case .success: return .green
-        case .dropped: return .gray
-        case .failure: return .orange
+        case .success: return AppTheme.ringGreen
+        case .dropped: return AppTheme.textOnDarkSecondary
+        case .failure: return AppTheme.ringRedOrange
         }
     }
     

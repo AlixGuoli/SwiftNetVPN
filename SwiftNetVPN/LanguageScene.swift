@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// 语言页：App 内切换显示语言（en / 简体中文）
+/// 语言页：自定义 item 行，不用 List
 struct LanguageScene: View {
     
     @EnvironmentObject private var appLanguage: AppLanguageManager
@@ -14,25 +14,51 @@ struct LanguageScene: View {
     ]
     
     var body: some View {
-        List {
-            ForEach(options, id: \.code) { item in
-                let label = L10n(bundle: appLanguage.currentBundle).string(item.labelKey)
-                Button {
-                    appLanguage.setLanguage(item.code)
-                    dismiss()
-                } label: {
-                    HStack {
-                        Text(label)
-                        Spacer()
-                        if appLanguage.currentLanguageCode == item.code {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(.accentColor)
+        ZStack {
+            SceneBackground()
+            ScrollView {
+                VStack(spacing: 0) {
+                    ForEach(Array(options.enumerated()), id: \.element.code) { idx, item in
+                        if idx > 0 {
+                            Rectangle().fill(AppTheme.surfaceOnDarkBorder).frame(height: 1).padding(.leading, 16)
                         }
+                        let label = L10n(bundle: appLanguage.currentBundle).string(item.labelKey)
+                        Button {
+                            appLanguage.setLanguage(item.code)
+                            dismiss()
+                        } label: {
+                            HStack(spacing: 12) {
+                                Text(label)
+                                    .font(.system(size: 16, weight: .medium))
+                                    .foregroundColor(AppTheme.textOnDark)
+                                Spacer(minLength: 8)
+                                if appLanguage.currentLanguageCode == item.code {
+                                    Image(systemName: "checkmark.circle.fill")
+                                        .font(.system(size: 20))
+                                        .foregroundStyle(AppTheme.ringGreen)
+                                }
+                            }
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 14)
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
+                .background(
+                    RoundedRectangle(cornerRadius: AppTheme.surfaceCorner, style: .continuous)
+                        .fill(AppTheme.surfaceOnDark)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: AppTheme.surfaceCorner, style: .continuous)
+                                .stroke(AppTheme.surfaceOnDarkBorder, lineWidth: 1)
+                        )
+                )
+                .padding(.horizontal, AppTheme.pageHorizontal)
+                .padding(.top, 16)
             }
         }
         .navigationTitle(l10n.languageTitle)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(.hidden, for: .navigationBar)
     }
 }

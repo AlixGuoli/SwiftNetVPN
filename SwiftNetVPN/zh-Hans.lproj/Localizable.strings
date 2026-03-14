@@ -3,6 +3,14 @@
 "settings_section_general" = "通用";
 "settings_general" = "通用选项";
 "settings_language" = "语言";
+"settings_section_info" = "信息";
+"settings_about" = "关于我们";
+"settings_guide" = "使用说明";
+"settings_privacy" = "隐私政策";
+"settings_terms" = "用户协议";
+"settings_contact" = "联系与反馈";
+"settings_section_tools" = "工具";
+"settings_tools_entry" = "小工具";
 
 /* 语言 */
 "language_title" = "语言";
@@ -10,7 +18,6 @@
 "language_chinese" = "简体中文";
 
 /* 主页 */
-"main_app_name" = "SwiftNet";
 "main_status_idle" = "未连接";
 "main_status_dialing" = "正在连接…";
 "main_status_online" = "已连接";
@@ -24,15 +31,27 @@
 "main_hint_online" = "流量已通过安全隧道转发。";
 "line_auto" = "智能选择";
 
-/* 隐私 */
-"privacy_title" = "隐私与使用条款";
-"privacy_body" = "我们需要使用 VPN 能力来建立加密通道，从而保护你的网络数据安全。应用不会收集与你个人身份直接关联的敏感信息，基础的连接日志仅用于排查故障与提升服务质量。\n\n请在继续使用前，仔细阅读并同意本应用的隐私政策与使用条款。";
-"privacy_agree" = "同意并继续";
-"privacy_decline" = "不同意，退出应用";
+/* 首次启动同意/数据说明页 */
+"consent_title" = "隐私与数据";
+"consent_intro" = "本应用提供 VPN 连接能力，并尽量少收集数据。以下为可能涉及的数据类型及用途说明。";
+"consent_section_label" = "涉及的数据类型";
+"consent_card_id_heading" = "服务标识";
+"consent_card_id_body" = "为运行 VPN 并保障安全，我们会分配一个不涉及个人身份的 ID，不与姓名、邮箱等关联。";
+"consent_card_network_heading" = "网络与质量";
+"consent_card_network_body" = "以匿名方式收集的连接与质量数据用于优选节点、改善网络，无法用于识别个人。";
+"consent_card_usage_heading" = "汇总用量";
+"consent_card_usage_body" = "如连接时长、流量等汇总数据用于维护与改进服务，不涉及个人身份识别。";
+"consent_card_external_heading" = "外部服务";
+"consent_card_external_body" = "若接入第三方能力（如统计），其数据处理依其自身政策，我们无法控制其行为。";
+"consent_more_terms" = "完整条款见《隐私政策》。";
+"consent_more_link" = "打开隐私政策";
+"consent_confirm_hint" = "点击「同意并继续」即表示你已阅读并接受上述说明。";
+"consent_accept_btn" = "同意并继续";
+"consent_reject_btn" = "不同意，退出";
 
 /* 启动页 */
-"splash_app_name" = "SwiftNet";
 "splash_tagline" = "安全网络入口";
+"splash_version" = "版本 %@";
 
 /* 连接中 */
 "dial_title" = "正在建立连接…";
@@ -60,3 +79,68 @@
 
 /* 节点 */
 "nodes_title" = "选择节点";
+
+/* 工具箱 */
+"tools_title" = "小工具";
+"tool_ip_title" = "当前 IP";
+"tool_ip_loading" = "检测中…";
+"tool_ip_desc" = "这是网站和在线服务看到的出口 IP 地址。";
+"tool_ip_copy" = "复制";
+"tool_ping_title" = "延迟测试";
+"tool_ping_testing" = "检测中…";
+"tool_ping_start" = "开始";
+"tool_ping_again" = "再测一次";
+"tool_ping_hint" = "数值越低延迟越小，不同线路和地区会有差异。";
+"tool_dns_title" = "DNS 泄露检测";
+"tool_dns_desc" = "DNS 泄露指 DNS 请求可能未经过 VPN 隧道。可用下方链接自检。";
+"tool_dns_open" = "打开检测页";
+"tool_speed_title" = "网速测试";
+"tool_speed_desc" = "进行一次大致的网速检测，结果仅供参考。";
+"tool_speed_start" = "开始测速";
+"tool_speed_testing" = "测速中…";
+"tool_speed_download" = "下载";
+"tool_speed_upload" = "上传";
+"tool_speed_latency" = "延迟";
+"tool_speed_again" = "再测一次";
+"tool_speed_coming" = "敬请期待。";
+
+"tool_tips_title" = "使用提示";
+"tool_ip_tips" = "• 可用来判断流量是否经 VPN 出口。\n• 更换节点后 IP 会变化。\n• 结果仅供参考。";
+"tool_ip_retry" = "重试";
+"tool_ping_tips" = "• 数值越低延迟越小。\n• 换节点后可再测一次。\n• 不同地区与网络会有差异。";
+"tool_dns_tips" = "• 建议先连接 VPN，再打开检测页。\n• 若发现泄露可尝试换节点或 DNS。";
+"tool_speed_tips" = "• 建议在 Wi‑Fi 下测速，结果更稳定。\n• 每次结果会有波动。";
+"tool_summary_tips" = "• 此处统计仅供参考。\n• 功能后续可能增强。";
+"tool_random_title" = "随机数";
+"tool_random_desc" = "在最小值和最大值之间（含两端）生成一个随机整数。";
+"tool_random_min" = "最小值";
+"tool_random_max" = "最大值";
+"tool_random_generate" = "生成";
+"tool_random_result" = "结果";
+"tool_password_title" = "随机密码";
+"tool_password_desc" = "生成高强度随机密码，可用于账号、密钥等，生成后请妥善保存。";
+"tool_password_length" = "长度";
+"tool_password_symbols" = "包含符号";
+"tool_password_generate" = "生成";
+"tool_password_copy" = "复制";
+"tool_password_copied" = "已复制";
+"tool_password_tips" = "• 本地生成，不会上传。\n• 建议长度 16 位以上并包含符号。";
+
+/* 信息页 */
+"about_title" = "关于我们";
+"about_version" = "版本";
+"about_intro" = "SwiftNet 是一款简单易用的 VPN 应用，一键连接即可通过安全隧道加密您的网络流量。\n\n我们注重使用体验与数据最小化，不会记录您的浏览历史或个人身份信息，仅保障连接稳定与安全。\n\n感谢您的使用。更多说明与更新请访问下方官方网站。";
+"about_website" = "官方网站";
+"guide_title" = "使用说明";
+"guide_content" = "1. 点击主按钮连接，再次点击断开。\n2. 点击「当前线路」可更换节点。\n3. 连接后流量将通过加密隧道转发。";
+"privacy_policy_title" = "隐私政策";
+"privacy_policy_content" = "我们通过 VPN 建立加密通道，不会收集可识别个人身份的信息，连接日志仅用于改进服务。";
+"privacy_view_online" = "在线查看完整隐私政策";
+"terms_title" = "用户协议";
+"terms_content" = "使用本应用即表示你同意适用的使用条款。完整条款（Apple EULA）见下方链接。";
+"terms_view_online" = "查看使用条款（Apple）";
+"contact_title" = "联系与反馈";
+"contact_content" = "如需帮助或反馈，请通过邮件联系我们。";
+"contact_send_email" = "发邮件";
+"contact_no_mail_client" = "未配置邮件应用，已将邮箱地址复制到剪贴板。";
+"contact_email_copied" = "邮箱地址已复制。";
