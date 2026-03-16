@@ -9,7 +9,7 @@ final class AppLanguageManager: ObservableObject {
     
     private let key = "sn_app_language"
     
-    /// 当前语言代码（"en" / "zh-Hans"）
+    /// 当前语言代码（en / ru / es / de / fr）
     @Published var currentLanguageCode: String {
         didSet {
             UserDefaults.standard.set(currentLanguageCode, forKey: key)
@@ -27,16 +27,23 @@ final class AppLanguageManager: ObservableObject {
     
     private init() {
         let saved = UserDefaults.standard.string(forKey: key)
-        if let saved, (saved == "en" || saved == "zh-Hans") {
+        let supported = ["en", "ru", "es", "de", "fr"]
+        
+        if let saved, supported.contains(saved) {
             currentLanguageCode = saved
         } else {
             let system = Locale.current.language.languageCode?.identifier ?? "en"
-            currentLanguageCode = (system == "zh") ? "zh-Hans" : "en"
+            if supported.contains(system) {
+                currentLanguageCode = system
+            } else {
+                currentLanguageCode = "en"
+            }
         }
     }
     
     func setLanguage(_ code: String) {
-        guard code == "en" || code == "zh-Hans" else { return }
+        let supported = ["en", "ru", "es", "de", "fr"]
+        guard supported.contains(code) else { return }
         currentLanguageCode = code
     }
 }

@@ -65,14 +65,13 @@ struct ContentView: View {
             .preferredColorScheme(.dark)
             .environment(\.navigateToRoute, { path.append($0) })
             .environmentObject(hub)
-            .onChange(of: hub.stage) { stage in
-                switch stage {
-                case .dialing:
+            .onChange(of: hub.isDialViewVisible) { visible in
+                if visible {
                     if !dialPushed {
                         path.append(Route.dial)
                         dialPushed = true
                     }
-                default:
+                } else {
                     if dialPushed, !path.isEmpty {
                         path.removeLast()
                         dialPushed = false

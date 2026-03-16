@@ -8,20 +8,21 @@ struct LanguageScene: View {
     
     private var l10n: L10n { L10n(bundle: appLanguage.currentBundle) }
     
+    /// 语言选项：英文优先，其次俄语，再是西/德/法
     private let options: [(code: String, labelKey: String)] = [
         ("en", "language_english"),
-        ("zh-Hans", "language_chinese")
+        ("ru", "language_russian"),
+        ("es", "language_spanish"),
+        ("de", "language_german"),
+        ("fr", "language_french")
     ]
     
     var body: some View {
         ZStack {
             SceneBackground()
             ScrollView {
-                VStack(spacing: 0) {
-                    ForEach(Array(options.enumerated()), id: \.element.code) { idx, item in
-                        if idx > 0 {
-                            Rectangle().fill(AppTheme.surfaceOnDarkBorder).frame(height: 1).padding(.leading, 16)
-                        }
+                VStack(spacing: 12) {
+                    ForEach(options, id: \.code) { item in
                         let label = L10n(bundle: appLanguage.currentBundle).string(item.labelKey)
                         Button {
                             appLanguage.setLanguage(item.code)
@@ -38,23 +39,21 @@ struct LanguageScene: View {
                                         .foregroundStyle(AppTheme.ringGreen)
                                 }
                             }
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, 14)
+                            .padding(.horizontal, 18)
+                            .padding(.vertical, 18)
+                            .frame(maxWidth: .infinity, minHeight: 64, alignment: .leading)
                             .contentShape(Rectangle())
                         }
                         .buttonStyle(.plain)
+                        .background(
+                            RoundedRectangle(cornerRadius: AppTheme.surfaceCorner, style: .continuous)
+                                .fill(AppTheme.surfaceOnDark)
+                        )
                     }
                 }
-                .background(
-                    RoundedRectangle(cornerRadius: AppTheme.surfaceCorner, style: .continuous)
-                        .fill(AppTheme.surfaceOnDark)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: AppTheme.surfaceCorner, style: .continuous)
-                                .stroke(AppTheme.surfaceOnDarkBorder, lineWidth: 1)
-                        )
-                )
                 .padding(.horizontal, AppTheme.pageHorizontal)
                 .padding(.top, 16)
+                .padding(.bottom, 32)
             }
         }
         .navigationTitle(l10n.languageTitle)

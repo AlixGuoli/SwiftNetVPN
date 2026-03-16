@@ -1,0 +1,150 @@
+/* Español */
+"settings_title" = "Ajustes";
+"settings_section_general" = "General";
+"settings_general" = "Opciones generales";
+"settings_language" = "Idioma";
+"settings_section_info" = "Información";
+"settings_about" = "Acerca de";
+"settings_guide" = "Cómo usar";
+"settings_privacy" = "Política de privacidad";
+"settings_terms" = "Términos de uso";
+"settings_contact" = "Contacto y soporte";
+"settings_section_tools" = "Herramientas";
+"settings_tools_entry" = "Caja de herramientas";
+
+/* Idiomas */
+"language_title" = "Idioma";
+"language_english" = "English";
+"language_russian" = "Русский";
+"language_spanish" = "Español";
+"language_german" = "Deutsch";
+"language_french" = "Français";
+
+/* Pantalla principal */
+"main_status_idle" = "Desconectado";
+"main_status_dialing" = "Conectando…";
+"main_status_online" = "Conectado";
+"main_status_error" = "Error de conexión";
+"main_btn_connect" = "Conectar";
+"main_btn_connecting" = "Conectando";
+"main_btn_disconnect" = "Desconectar";
+"main_current_line" = "Servidor actual: ";
+"main_hint_idle" = "Un solo toque para cifrar tu tráfico con VPN.";
+"main_hint_dialing" = "Estableciendo una conexión segura…";
+"main_hint_online" = "El tráfico se envía a través de un túnel cifrado.";
+"line_auto" = "Selección automática";
+
+/* Pantalla de consentimiento / datos (primer inicio) */
+"consent_title" = "Privacidad y datos";
+"consent_intro" = "Esta aplicación ofrece conexión VPN con un enfoque en la mínima recopilación de datos. A continuación se explican los posibles tipos de datos y su finalidad.";
+"consent_section_label" = "Categorías de datos";
+"consent_card_id_heading" = "Identificador del servicio";
+"consent_card_id_body" = "Asignamos un ID no personal para operar la VPN y mantener la seguridad. No se vincula con tu nombre, correo u otros identificadores.";
+"consent_card_network_heading" = "Red y rendimiento";
+"consent_card_network_body" = "Las métricas anónimas de conexión y calidad se utilizan para elegir mejores servidores y mejorar la red. No permiten identificarte.";
+"consent_card_usage_heading" = "Uso agregado";
+"consent_card_usage_body" = "Datos agregados como duración de la conexión y volumen de tráfico ayudan a mantener y mejorar el servicio sin identificar a usuarios individuales.";
+"consent_card_external_heading" = "Servicios externos";
+"consent_card_external_body" = "Si se usan herramientas de terceros (por ejemplo, analítica), el tratamiento de datos se rige por sus propias políticas. No controlamos cómo manejan la información.";
+"consent_more_terms" = "El texto completo está disponible en nuestra Política de privacidad.";
+"consent_more_link" = "Abrir Política de privacidad";
+"consent_confirm_hint" = "Al pulsar «Aceptar y continuar», confirmas que has leído y aceptas lo anterior.";
+"consent_accept_btn" = "Aceptar y continuar";
+"consent_reject_btn" = "Rechazar y salir";
+
+/* Splash */
+"splash_tagline" = "Entrada segura a la red";
+"splash_version" = "Versión %@";
+
+/* Conexión */
+"dial_title" = "Estableciendo conexión…";
+"dial_subtitle" = "Normalmente solo tarda unos segundos.";
+
+/* Resultado */
+"outcome_back" = "Atrás";
+"outcome_title_success" = "Conexión establecida";
+"outcome_title_dropped" = "Conexión finalizada";
+"outcome_title_failure" = "No se pudo conectar";
+"outcome_detail_success" = "Ahora puedes navegar de forma segura. Vuelve a la pantalla principal cuando quieras desconectar.";
+"outcome_detail_dropped" = "La conexión ha terminado. Para volver a proteger tu tráfico, regresa a la pantalla principal y conecta de nuevo.";
+"outcome_detail_failure" = "La red puede ser inestable o el servidor está temporalmente no disponible. Inténtalo de nuevo o cambia de servidor.";
+
+/* Confirmación de desconexión */
+"terminate_title" = "¿Desconectar la conexión actual?";
+"terminate_message" = "Al desconectar, el tráfico dejará de pasar por el túnel seguro.";
+"terminate_cancel" = "Cancelar";
+"terminate_confirm" = "Desconectar";
+
+/* Sin red */
+"nonetwork_title" = "Sin conexión de red";
+"nonetwork_message" = "Comprueba tu conexión a Internet o datos móviles e inténtalo de nuevo.";
+"common_ok" = "Aceptar";
+
+/* Servidores */
+"nodes_title" = "Seleccionar servidor";
+
+/* Caja de herramientas */
+"tools_title" = "Herramientas";
+"tool_ip_title" = "IP actual";
+"tool_ip_loading" = "Comprobando…";
+"tool_ip_desc" = "Esta es la dirección IP visible para los sitios web y servicios en línea.";
+"tool_ip_copy" = "Copiar";
+"tool_ping_title" = "Prueba de latencia";
+"tool_ping_testing" = "Probando…";
+"tool_ping_start" = "Iniciar";
+"tool_ping_again" = "Probar de nuevo";
+"tool_ping_hint" = "Un valor más bajo significa menos retraso. Los resultados varían según servidor y región.";
+"tool_dns_title" = "Prueba de fuga de DNS";
+"tool_dns_desc" = "Una fuga de DNS significa que tus consultas pueden salir fuera del túnel VPN. Usa el enlace de abajo para comprobarlo.";
+"tool_dns_open" = "Abrir página de prueba";
+"tool_speed_title" = "Test de velocidad";
+"tool_speed_desc" = "Realiza una comprobación rápida y aproximada de la velocidad.";
+"tool_speed_start" = "Iniciar prueba";
+"tool_speed_testing" = "Realizando prueba…";
+"tool_speed_download" = "Descarga";
+"tool_speed_upload" = "Subida";
+"tool_speed_latency" = "Latencia";
+"tool_speed_again" = "Probar otra vez";
+"tool_speed_coming" = "Próximamente.";
+
+"tool_tips_title" = "Consejos";
+"tool_ip_tips" = "• Sirve para comprobar si tu tráfico pasa por la VPN.\n• Al cambiar de servidor, tu IP también cambiará.\n• Los resultados son solo de referencia.";
+"tool_ip_retry" = "Reintentar";
+"tool_ping_tips" = "• Un valor menor implica menor latencia.\n• Después de cambiar de servidor, vuelve a probar.\n• Los resultados dependen de la región y la red.";
+"tool_dns_tips" = "• Conéctate primero a la VPN y luego abre la página de prueba.\n• Si detectas una fuga, prueba con otro servidor o DNS.";
+"tool_speed_tips" = "• Para resultados más estables, haz la prueba con Wi‑Fi.\n• La velocidad puede variar ligeramente en cada medición.";
+"tool_summary_tips" = "• Las estadísticas mostradas son orientativas.\n• Es posible que ampliemos esta sección más adelante.";
+"tool_random_title" = "Número aleatorio";
+"tool_random_desc" = "Genera un número entero entre el mínimo y el máximo (incluidos).";
+"tool_random_min" = "Mín.";
+"tool_random_max" = "Máx.";
+"tool_random_generate" = "Generar";
+"tool_random_result" = "Resultado";
+"tool_password_title" = "Contraseña aleatoria";
+"tool_password_desc" = "Genera una contraseña segura para cuentas, claves, etc. Guárdala en un lugar seguro.";
+"tool_password_length" = "Longitud";
+"tool_password_symbols" = "Incluir símbolos";
+"tool_password_generate" = "Generar";
+"tool_password_copy" = "Copiar";
+"tool_password_copied" = "Copiado";
+"tool_password_tips" = "• La contraseña se genera localmente y no se envía a ningún servidor.\n• Se recomienda una longitud de 16 caracteres o más y el uso de símbolos.";
+
+/* Páginas de información */
+"about_title" = "Acerca de";
+"about_version" = "Versión";
+"about_intro" = "SwiftNet es una aplicación VPN sencilla y fiable. Un solo toque para cifrar tu tráfico a través de un túnel seguro.\n\nNos centramos en la facilidad de uso y en la mínima recopilación de datos. Tu conexión está protegida: no registramos tu historial de navegación ni tu información personal.\n\nGracias por elegirnos. Para más información y novedades, visita nuestro sitio web oficial.";
+"about_website" = "Sitio web oficial";
+"guide_title" = "Cómo usar";
+"guide_content" = "1. Pulsa el botón principal para conectar; vuelve a pulsar para desconectar.\n2. Pulsa en «Servidor actual» para elegir otro nodo.\n3. Cuando estés conectado, tu tráfico se enviará por un túnel cifrado.";
+"privacy_policy_title" = "Política de privacidad";
+"privacy_policy_content" = "Usamos VPN para crear un túnel cifrado. No recopilamos información que identifique directamente a la persona. Los registros de conexión se utilizan solo para mejorar el servicio.";
+"privacy_view_online" = "Ver política completa en línea";
+"terms_title" = "Términos de uso";
+"terms_content" = "Al usar esta aplicación aceptas los términos de uso aplicables. El texto completo de los términos (Apple EULA) está disponible en el siguiente enlace.";
+"terms_view_online" = "Ver términos de uso (Apple)";
+"contact_title" = "Contacto y soporte";
+"contact_content" = "Para soporte o comentarios, ponte en contacto con nosotros por correo electrónico.";
+"contact_send_email" = "Enviar correo";
+"contact_no_mail_client" = "No hay una app de correo configurada. La dirección se ha copiado al portapapeles.";
+"contact_email_copied" = "Dirección de correo copiada.";
+

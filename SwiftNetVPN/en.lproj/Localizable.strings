@@ -15,7 +15,10 @@
 /* Language */
 "language_title" = "Language";
 "language_english" = "English";
-"language_chinese" = "Simplified Chinese";
+"language_russian" = "Russian";
+"language_spanish" = "Spanish";
+"language_german" = "German";
+"language_french" = "French";
 
 /* Main */
 "main_status_idle" = "Disconnected";

@@ -5,6 +5,7 @@ struct DialScene: View {
     
     @EnvironmentObject private var hub: FlowHub
     @EnvironmentObject private var appLanguage: AppLanguageManager
+    @State private var timeoutTask: Task<Void, Never>?
     
     private var l10n: L10n { L10n(bundle: appLanguage.currentBundle) }
     
@@ -26,6 +27,21 @@ struct DialScene: View {
                 Spacer()
             }
             .padding(.horizontal, AppTheme.pageHorizontal)
+        }
+        .navigationBarBackButtonHidden(true) // 禁止手动返回，只允许流程自然结束或超时关闭
+        .onAppear {
+            // 页面出现即开始 40 秒计时，到点后仅隐藏本页，不改主流程状态
+            timeoutTask = Task { [weak hub] in
+                try? await Task.sleep(nanoseconds: 40 * 1_000_000_000)
+                await MainActor.run {
+                    guard let hub, hub.stage == .dialing else { return }
+                    hub.setDialVisible(false)
+                }
+            }
+        }
+        .onDisappear {
+            timeoutTask?.cancel()
+            timeoutTask = nil
         }
     }
 }

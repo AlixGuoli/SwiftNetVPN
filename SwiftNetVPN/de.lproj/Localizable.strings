@@ -1,0 +1,150 @@
+/* Deutsch */
+"settings_title" = "Einstellungen";
+"settings_section_general" = "Allgemein";
+"settings_general" = "Allgemeine Optionen";
+"settings_language" = "Sprache";
+"settings_section_info" = "Informationen";
+"settings_about" = "Über die App";
+"settings_guide" = "Nutzung";
+"settings_privacy" = "Datenschutzrichtlinie";
+"settings_terms" = "Nutzungsbedingungen";
+"settings_contact" = "Kontakt & Support";
+"settings_section_tools" = "Werkzeuge";
+"settings_tools_entry" = "Toolbox";
+
+/* Sprachen */
+"language_title" = "Sprache";
+"language_english" = "English";
+"language_russian" = "Русский";
+"language_spanish" = "Español";
+"language_german" = "Deutsch";
+"language_french" = "Français";
+
+/* Startseite */
+"main_status_idle" = "Nicht verbunden";
+"main_status_dialing" = "Verbindung wird aufgebaut…";
+"main_status_online" = "Verbunden";
+"main_status_error" = "Verbindungsfehler";
+"main_btn_connect" = "Verbinden";
+"main_btn_connecting" = "Verbinde…";
+"main_btn_disconnect" = "Trennen";
+"main_current_line" = "Aktueller Server: ";
+"main_hint_idle" = "Mit einem Tipp wird dein Datenverkehr per VPN verschlüsselt.";
+"main_hint_dialing" = "Sichere Verbindung wird hergestellt…";
+"main_hint_online" = "Dein Datenverkehr läuft durch einen verschlüsselten Tunnel.";
+"line_auto" = "Automatische Auswahl";
+
+/* Einwilligung / Daten (erster Start) */
+"consent_title" = "Datenschutz & Daten";
+"consent_intro" = "Diese App stellt eine VPN‑Verbindung bereit und sammelt so wenig Daten wie möglich. Unten siehst du, welche Datenarten genutzt werden können und zu welchem Zweck.";
+"consent_section_label" = "Datenkategorien";
+"consent_card_id_heading" = "Dienst‑ID";
+"consent_card_id_body" = "Wir vergeben eine nicht‑personalisierte ID, um das VPN zu betreiben und die Sicherheit zu gewährleisten. Sie wird nicht mit Namen, E‑Mail oder ähnlichen Angaben verknüpft.";
+"consent_card_network_heading" = "Netzwerk & Leistung";
+"consent_card_network_body" = "Anonymisierte Verbindungs‑ und Qualitätsdaten helfen uns, bessere Server zu wählen und das Netzwerk zu verbessern. Sie erlauben keine Identifizierung deiner Person.";
+"consent_card_usage_heading" = "Aggregierte Nutzung";
+"consent_card_usage_body" = "Summen wie Verbindungsdauer und Datenvolumen dienen der Wartung und Verbesserung des Dienstes, ohne einzelne Nutzer zu identifizieren.";
+"consent_card_external_heading" = "Externe Dienste";
+"consent_card_external_body" = "Werden Drittanbieter‑Tools (z. B. Analyse) eingesetzt, gelten deren eigene Richtlinien. Wir steuern nicht, wie sie Daten verarbeiten.";
+"consent_more_terms" = "Die vollständigen Bedingungen findest du in unserer Datenschutzrichtlinie.";
+"consent_more_link" = "Datenschutzrichtlinie öffnen";
+"consent_confirm_hint" = "Mit „Zustimmen & fortfahren“ bestätigst du, dass du die obigen Hinweise gelesen und akzeptiert hast.";
+"consent_accept_btn" = "Zustimmen & fortfahren";
+"consent_reject_btn" = "Ablehnen und beenden";
+
+/* Splash */
+"splash_tagline" = "Sicherer Einstieg ins Netz";
+"splash_version" = "Version %@";
+
+/* Verbinden */
+"dial_title" = "Verbindung wird hergestellt…";
+"dial_subtitle" = "Das dauert in der Regel nur wenige Sekunden.";
+
+/* Ergebnis */
+"outcome_back" = "Zurück";
+"outcome_title_success" = "Verbindung hergestellt";
+"outcome_title_dropped" = "Verbindung getrennt";
+"outcome_title_failure" = "Verbindung fehlgeschlagen";
+"outcome_detail_success" = "Du kannst jetzt sicher im Internet surfen. Kehre zur Startseite zurück, wenn du die Verbindung trennen möchtest.";
+"outcome_detail_dropped" = "Die Verbindung wurde beendet. Um den Schutz erneut zu aktivieren, gehe zur Startseite und verbinde dich erneut.";
+"outcome_detail_failure" = "Das Netzwerk ist möglicherweise instabil oder der Server vorübergehend nicht erreichbar. Versuche es erneut oder wähle einen anderen Server.";
+
+/* Trennung bestätigen */
+"terminate_title" = "Aktuelle Verbindung trennen?";
+"terminate_message" = "Nach dem Trennen wird der Datenverkehr nicht mehr durch den sicheren Tunnel geleitet.";
+"terminate_cancel" = "Abbrechen";
+"terminate_confirm" = "Trennen";
+
+/* Keine Verbindung */
+"nonetwork_title" = "Keine Netzwerkverbindung";
+"nonetwork_message" = "Bitte prüfe deine Internetverbindung oder mobilen Daten und versuche es erneut.";
+"common_ok" = "OK";
+
+/* Server */
+"nodes_title" = "Server auswählen";
+
+/* Toolbox */
+"tools_title" = "Toolbox";
+"tool_ip_title" = "Aktuelle IP";
+"tool_ip_loading" = "Prüfe…";
+"tool_ip_desc" = "Dies ist die IP‑Adresse, die Websites und Online‑Dienste sehen.";
+"tool_ip_copy" = "Kopieren";
+"tool_ping_title" = "Latenztest";
+"tool_ping_testing" = "Teste…";
+"tool_ping_start" = "Starten";
+"tool_ping_again" = "Erneut testen";
+"tool_ping_hint" = "Niedrigere Werte bedeuten weniger Verzögerung. Die Ergebnisse unterscheiden sich je nach Server und Region.";
+"tool_dns_title" = "DNS‑Leak‑Test";
+"tool_dns_desc" = "Ein DNS‑Leak bedeutet, dass DNS‑Anfragen am VPN‑Tunnel vorbeilaufen können. Verwende den folgenden Link, um das zu prüfen.";
+"tool_dns_open" = "Testseite öffnen";
+"tool_speed_title" = "Speedtest";
+"tool_speed_desc" = "Ein schneller, grober Geschwindigkeitstest.";
+"tool_speed_start" = "Test starten";
+"tool_speed_testing" = "Teste Geschwindigkeit…";
+"tool_speed_download" = "Download";
+"tool_speed_upload" = "Upload";
+"tool_speed_latency" = "Latenz";
+"tool_speed_again" = "Erneut testen";
+"tool_speed_coming" = "Demnächst verfügbar.";
+
+"tool_tips_title" = "Tipps";
+"tool_ip_tips" = "• Prüfe, ob dein Datenverkehr über die VPN‑Verbindung läuft.\n• Beim Wechsel des Servers ändert sich deine IP.\n• Die Ergebnisse dienen nur zur Orientierung.";
+"tool_ip_retry" = "Erneut versuchen";
+"tool_ping_tips" = "• Ein niedrigerer Wert bedeutet geringere Latenz.\n• Nach einem Serverwechsel kannst du erneut testen.\n• Die Werte hängen von Region und Netzwerk ab.";
+"tool_dns_tips" = "• Verbinde dich zuerst mit der VPN und öffne dann die Testseite.\n• Wenn ein Leak festgestellt wird, probiere einen anderen Server oder DNS.";
+"tool_speed_tips" = "• Für stabilere Ergebnisse teste am besten über WLAN.\n• Die Geschwindigkeit kann bei jedem Test leicht schwanken.";
+"tool_summary_tips" = "• Die angezeigte Statistik ist nur zur Orientierung.\n• Dieser Bereich kann später erweitert werden.";
+"tool_random_title" = "Zufallszahl";
+"tool_random_desc" = "Erzeugt eine ganze Zahl zwischen Minimum und Maximum (einschließlich).";
+"tool_random_min" = "Min.";
+"tool_random_max" = "Max.";
+"tool_random_generate" = "Generieren";
+"tool_random_result" = "Ergebnis";
+"tool_password_title" = "Zufälliges Passwort";
+"tool_password_desc" = "Erzeugt ein sicheres zufälliges Passwort für Konten, Schlüssel usw. Bewahre es an einem sicheren Ort auf.";
+"tool_password_length" = "Länge";
+"tool_password_symbols" = "Symbole einschließen";
+"tool_password_generate" = "Generieren";
+"tool_password_copy" = "Kopieren";
+"tool_password_copied" = "Kopiert";
+"tool_password_tips" = "• Das Passwort wird lokal erzeugt und nicht an Server gesendet.\n• Empfohlen sind mindestens 16 Zeichen und die Verwendung von Symbolen.";
+
+/* Infoseiten */
+"about_title" = "Über die App";
+"about_version" = "Version";
+"about_intro" = "SwiftNet ist eine einfache und zuverlässige VPN‑App. Mit einem Tipp wird dein Datenverkehr durch einen sicheren Tunnel verschlüsselt.\n\nWir legen Wert auf einfache Bedienung und minimale Datenerfassung. Deine Verbindung ist geschützt; wir protokollieren weder deinen Browserverlauf noch persönliche Daten.\n\nVielen Dank, dass du uns gewählt hast. Weitere Informationen und Updates findest du auf unserer offiziellen Website.";
+"about_website" = "Offizielle Website";
+"guide_title" = "Nutzung";
+"guide_content" = "1. Tippe auf die Haupttaste, um zu verbinden; tippe erneut, um zu trennen.\n2. Tippe auf „Aktueller Server“, um einen anderen Knoten zu wählen.\n3. Wenn du verbunden bist, wird dein Datenverkehr durch einen verschlüsselten Tunnel geleitet.";
+"privacy_policy_title" = "Datenschutzrichtlinie";
+"privacy_policy_content" = "Wir verwenden VPN, um einen verschlüsselten Tunnel zu erstellen. Wir sammeln keine direkt personenbezogenen Daten. Verbindungsprotokolle werden nur zur Verbesserung des Dienstes verwendet.";
+"privacy_view_online" = "Vollständige Richtlinie online anzeigen";
+"terms_title" = "Nutzungsbedingungen";
+"terms_content" = "Durch die Nutzung dieser App stimmst du den geltenden Nutzungsbedingungen zu. Der vollständige Text (Apple EULA) ist über den folgenden Link verfügbar.";
+"terms_view_online" = "Nutzungsbedingungen anzeigen (Apple)";
+"contact_title" = "Kontakt & Feedback";
+"contact_content" = "Für Support oder Feedback kontaktiere uns bitte per E‑Mail.";
+"contact_send_email" = "E‑Mail senden";
+"contact_no_mail_client" = "Es ist keine Mail‑App eingerichtet. Die Adresse wurde in die Zwischenablage kopiert.";
+"contact_email_copied" = "E‑Mail‑Adresse kopiert.";
+

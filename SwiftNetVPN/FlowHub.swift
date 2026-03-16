@@ -214,6 +214,11 @@ final class FlowHub: ObservableObject {
         UserDefaults.standard.set(line.id, forKey: "sn_line_id")
     }
     
+    /// 仅供 UI 控制连接中页显隐，不改变连接状态
+    func setDialVisible(_ visible: Bool) {
+        isDialViewVisible = visible
+    }
+    
     // MARK: - 连接流程
     
     /// 先拿到配置权限（ensureProfile 会触发系统 VPN 权限弹窗），
