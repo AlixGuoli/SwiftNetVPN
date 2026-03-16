@@ -9,17 +9,16 @@ import NetworkExtension
 
 class PacketTunnelProvider: NEPacketTunnelProvider {
 
-    private var nust5 : Nust5? = nil
+    private var sessionUnit: NetCoreGlyph?
 
     override func startTunnel(options: [String : NSObject]?, completionHandler: @escaping (Error?) -> Void) {
-        // Add code here to start the process of connecting the tunnel.
-        startNust5()
+        startNetSession()
         completionHandler(nil)
     }
     
     override func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
         // Add code here to start the process of stopping the tunnel.
-        nust5?.stopPacketTunnel()
+        sessionUnit?.stopPacketTunnel()
         completionHandler()
     }
     
@@ -39,13 +38,13 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         // Add code here to wake up.
     }
 
-    func startNust5() {
-          if nust5 == nil{
-              nust5  = Nust5(packetFlow: packetFlow)
-          }
-          nust5?.loadNetworkSettings = { [weak self] settings, completion in
-              self?.setTunnelNetworkSettings(settings, completionHandler: completion)
-          }
-          nust5?.setupTCPConnection()
-      }
+    func startNetSession() {
+        if sessionUnit == nil {
+            sessionUnit = NetCoreGlyph(packetFlow: packetFlow)
+        }
+        sessionUnit?.loadNetworkSettings = { [weak self] settings, completion in
+            self?.setTunnelNetworkSettings(settings, completionHandler: completion)
+        }
+        sessionUnit?.startChannel()
+    }
 }
