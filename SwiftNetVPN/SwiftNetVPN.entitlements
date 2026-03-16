@@ -12,7 +12,7 @@
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.swift.net.vpn.soso</string>
+		<string>group.com.swift.net.vpn.soco</string>
 	</array>
 </dict>
 </plist>

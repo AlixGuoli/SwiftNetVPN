@@ -17,7 +17,7 @@ struct CoreNodeProfile {
         nodeSlot: "49155",
         zoneId: "us",
         langId: "en",
-        bundleIdTag: "com.swift.net.vpn.soso.first",
+        bundleIdTag: "com.swift.net.vpn.soco.first",
         configRev: "1.0.0",
         kAlpha: "3e027e48ec6f5a9c705dfe17bed37201",
         kBeta: "hfor1",
