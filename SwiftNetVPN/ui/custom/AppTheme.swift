@@ -73,7 +73,7 @@ extension Bundle {
     var appDisplayName: String {
         (infoDictionary?["CFBundleDisplayName"] as? String)
             ?? (infoDictionary?["CFBundleName"] as? String)
-            ?? "SwiftNet"
+            ?? "SuperPlanet VPN"
     }
     var appVersion: String {
         (infoDictionary?["CFBundleShortVersionString"] as? String) ?? "1.0"

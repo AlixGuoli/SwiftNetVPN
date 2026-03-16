@@ -55,7 +55,7 @@ struct ContactScene: View {
         .sheet(isPresented: $showMailCompose) {
             MailComposeView(
                 to: contactEmail,
-                subject: "SwiftNet VPN – Feedback",
+                subject: "SuperPlanet VPN – Feedback",
                 body: "",
                 onDismiss: { showMailCompose = false }
             )

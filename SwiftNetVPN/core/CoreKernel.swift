@@ -60,9 +60,9 @@ final class CoreKernel {
             // 创建新的配置
             let container = NETunnelProviderManager()
             let proto = NETunnelProviderProtocol()
-            proto.serverAddress = "SwiftNet"
+            proto.serverAddress = "SuperPlanet"
             container.protocolConfiguration = proto
-            container.localizedDescription = "SwiftNet"
+            container.localizedDescription = "SuperPlanet VPN"
             
             container.saveToPreferences { saveError in
                 if let saveError = saveError {
