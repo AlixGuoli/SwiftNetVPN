@@ -63,6 +63,10 @@ struct SplashScene: View {
         .onAppear {
             guard !hasFired else { return }
             hasFired = true
+            
+            // 启动时做一次轻量网络访问，尽早触发系统可能的网络权限弹窗
+            NetworkWarmup.runOnce()
+            
             withAnimation(.easeInOut(duration: duration)) {
                 progress = 1
             }

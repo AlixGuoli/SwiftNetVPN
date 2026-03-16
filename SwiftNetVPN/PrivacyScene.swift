@@ -1,4 +1,5 @@
 import SwiftUI
+import AppTrackingTransparency
 
 /// 隐私与数据说明：全屏页面 + 滚动内容 + 底部按钮（同意进入主流程，不同意由调用方 exit(0)）
 struct PrivacyScene: View {
@@ -68,7 +69,7 @@ struct PrivacyScene: View {
                         .padding(.horizontal, 20)
                     
                     Button {
-                        onAgree()
+                        handleAgreeTapped()
                     } label: {
                         Text(l10n.consentAcceptBtn)
                             .font(.system(size: 16, weight: .semibold))
@@ -94,6 +95,19 @@ struct PrivacyScene: View {
                 .padding(.top, 12)
                 .padding(.bottom, 8 + AppTheme.pageTopSafe) // 底部再抬一点，避免贴 Home 指示条
             }
+        }
+    }
+    
+    /// 用户点击「同意并继续」时，先请求 ATT（如适用），无论结果如何最终都调用 onAgree()
+    private func handleAgreeTapped() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { _ in
+                DispatchQueue.main.async {
+                    onAgree()
+                }
+            }
+        } else {
+            onAgree()
         }
     }
     
