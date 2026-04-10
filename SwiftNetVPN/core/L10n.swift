@@ -68,6 +68,17 @@ struct L10n {
     var splashTagline: String { string("splash_tagline") }
     func splashVersion(_ version: String) -> String { String(format: string("splash_version"), version) }
     
+    // MARK: - 首次引导（隐私同意后）
+    var onboardSkip: String { string("onboard_skip") }
+    var onboardNext: String { string("onboard_next") }
+    var onboardStart: String { string("onboard_start") }
+    var onboardP1Title: String { string("onboard_p1_title") }
+    var onboardP1Body: String { string("onboard_p1_body") }
+    var onboardP2Title: String { string("onboard_p2_title") }
+    var onboardP2Body: String { string("onboard_p2_body") }
+    var onboardP3Title: String { string("onboard_p3_title") }
+    var onboardP3Body: String { string("onboard_p3_body") }
+    
     // MARK: - 连接中
     var dialTitle: String { string("dial_title") }
     var dialSubtitle: String { string("dial_subtitle") }

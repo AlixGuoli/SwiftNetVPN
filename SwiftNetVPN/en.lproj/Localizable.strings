@@ -56,6 +56,17 @@
 "splash_tagline" = "Secure Network Entry";
 "splash_version" = "Version %@";
 
+/* Onboarding (after privacy, first launch) */
+"onboard_skip" = "Skip";
+"onboard_next" = "Next";
+"onboard_start" = "Get Started";
+"onboard_p1_title" = "Connect in one tap";
+"onboard_p1_body" = "Tap the large orbit button on the home screen to start or stop your VPN. Wait until the status updates—avoid force-quitting while it says connecting.";
+"onboard_p2_title" = "Pick your line";
+"onboard_p2_body" = "Use the strip at the bottom to open the list. Choose Smart select (Auto) or a specific region before you connect.";
+"onboard_p3_title" = "Permission & status";
+"onboard_p3_body" = "The first connection will ask to add VPN configurations—tap Allow. You can also check VPN status in iOS Settings › VPN.";
+
 /* Dial */
 "dial_title" = "Connecting…";
 "dial_subtitle" = "This usually takes a few seconds.";

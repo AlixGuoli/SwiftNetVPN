@@ -56,6 +56,17 @@
 "splash_tagline" = "Accès sécurisé au réseau";
 "splash_version" = "Version %@";
 
+/* Onboarding (après la confidentialité) */
+"onboard_skip" = "Passer";
+"onboard_next" = "Suivant";
+"onboard_start" = "Commencer";
+"onboard_p1_title" = "Se connecter en un geste";
+"onboard_p1_body" = "Touchez le grand bouton pour lancer ou arrêter le VPN. Attendez que le statut change—évitez de fermer brutalement l’app pendant « Connexion… ».";
+"onboard_p2_title" = "Choisir une ligne";
+"onboard_p2_body" = "La bande en bas ouvre la liste. Choisissez la sélection auto ou une région avant de vous connecter.";
+"onboard_p3_title" = "Autorisation et statut";
+"onboard_p3_body" = "Lors du premier lancement, iOS demande d’ajouter le VPN—appuyez sur « Autoriser ». Vérifiez aussi Réglages › VPN.";
+
 /* Connexion */
 "dial_title" = "Connexion en cours…";
 "dial_subtitle" = "Cela ne prend généralement que quelques secondes.";

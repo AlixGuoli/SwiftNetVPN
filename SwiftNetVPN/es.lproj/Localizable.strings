@@ -56,6 +56,17 @@
 "splash_tagline" = "Entrada segura a la red";
 "splash_version" = "Versión %@";
 
+/* Onboarding (después de privacidad) */
+"onboard_skip" = "Saltar";
+"onboard_next" = "Siguiente";
+"onboard_start" = "Empezar";
+"onboard_p1_title" = "Conecta con un toque";
+"onboard_p1_body" = "Toca el gran botón en la pantalla principal para iniciar o detener la VPN. Espera a que cambie el estado; evita cerrar la app forzosamente mientras dice «Conectando…».";
+"onboard_p2_title" = "Elige tu línea";
+"onboard_p2_body" = "Usa la franja inferior para abrir la lista. Selecciona Auto o una región antes de conectar.";
+"onboard_p3_title" = "Permiso y estado";
+"onboard_p3_body" = "La primera conexión pedirá añadir la VPN del sistema—pulsa «Permitir». También puedes ver el estado en Ajustes › VPN.";
+
 /* Conexión */
 "dial_title" = "Estableciendo conexión…";
 "dial_subtitle" = "Normalmente solo tarda unos segundos.";
